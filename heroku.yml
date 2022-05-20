@@ -1,0 +1,6 @@
+build:
+  docker:
+    build:
+        dockerfile: Dockerfile
+        context: ./api-service
+    web: Dockerfile
