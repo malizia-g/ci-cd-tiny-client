@@ -1,4 +1,3 @@
 build:
   docker:
-    worker: api-service/Dockerfile
-    web: Dockerfile
+    web: api-service/Dockerfile
