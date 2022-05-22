@@ -1,12 +1,11 @@
-version: '3.7'
 services:
   api-service:
       build:
         dockerfile: Dockerfile
         context: ./api-service
+      environment:
+        - PORT=5000
       volumes:
-        #Qui mappa tutto il contenuto della cartella locale client nella cartella app dell'immagine
-        #Ricorda che la WORKDIR dell'immagine è la cartella app
         - ./api-service:/app
       ports:
         - 5000:5000
