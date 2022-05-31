@@ -1,8 +1,10 @@
 import flask 
 from flask import jsonify
 from os import environ  
+from flask_cors import CORS
 
 app = flask.Flask(__name__)
+CORS(app)
 app.config["DEBUG"] = True
 env_port = 5000
 if environ.get('PORT') is not None: env_port =  environ.get('PORT')
